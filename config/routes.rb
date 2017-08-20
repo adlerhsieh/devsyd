@@ -17,4 +17,8 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :blog do
+    resources :posts
+  end
+
 end
