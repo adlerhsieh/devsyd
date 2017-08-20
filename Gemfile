@@ -15,6 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 
 # Test
 group :development, :test do
+  gem "rspec-rails"
+  gem "factory_girl"
+  gem "faker"
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
