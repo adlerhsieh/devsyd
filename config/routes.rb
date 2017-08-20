@@ -21,4 +21,10 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  namespace :forum do
+    resources :posts
+  end
+
+  root to: "forum/posts#index"
+
 end
