@@ -11,5 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require what-input
+//= require foundation.min
 //= require_tree .
-

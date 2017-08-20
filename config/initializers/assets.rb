@@ -22,3 +22,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Add folder with webpack generated assets to assets.paths
 Rails.application.config.assets.paths << Rails.root.join("public", "webpack", Rails.env)
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "css")
