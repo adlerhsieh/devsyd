@@ -30,5 +30,6 @@ group :development do
 
   # Others
   gem "figaro"
+  gem "listen"
 end
 
