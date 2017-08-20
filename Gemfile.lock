@@ -94,7 +94,6 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    libv8 (5.9.211.38.1-x86_64-darwin-15)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -109,8 +108,6 @@ GEM
     mime-types-data (3.2016.0521)
     mini_mime (0.1.4)
     mini_portile2 (2.2.0)
-    mini_racer (0.1.12)
-      libv8 (~> 5.9)
     minitest (5.10.3)
     multi_json (1.12.1)
     mysql2 (0.4.7)
@@ -215,10 +212,6 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    webpacker_lite (2.1.0)
-      activesupport (>= 4.2)
-      multi_json (~> 1.2)
-      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -238,7 +231,6 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.5)
   listen
-  mini_racer
   mysql2
   pry-rails
   puma (~> 3.7)
@@ -247,7 +239,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
-  webpacker_lite
 
 BUNDLED WITH
    1.15.4
