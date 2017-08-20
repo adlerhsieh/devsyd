@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "postinstall": "cd client && yarn install"
+  },
+
   "name": "devsyd",
   "private": true,
   "dependencies": {}

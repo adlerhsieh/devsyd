@@ -37,3 +37,6 @@ group :development do
   gem "listen"
 end
 
+
+gem 'mini_racer', platforms: :ruby
+gem 'webpacker_lite'
