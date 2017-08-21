@@ -15,3 +15,7 @@
 //= require what-input
 //= require foundation.min
 //= require_tree .
+
+var square = (n) => n * n
+
+console.log(square(20));

@@ -12,6 +12,8 @@ gem "mysql2"
 # Assets
 gem 'sass-rails', '~> 5.0'
 gem 'react_on_rails', "8.0.0"
+gem "sprockets", '4.0.0.beta4'
+gem 'babel-transpiler'
 # gem 'uglifier', '>= 1.3.0'
 
 # Test
