@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "forum/posts#index"
+
+  devise_for :users
 
   namespace :api do
     namespace :v1 do
@@ -24,7 +26,5 @@ Rails.application.routes.draw do
   namespace :forum do
     resources :posts
   end
-
-  root to: "forum/posts#index"
 
 end

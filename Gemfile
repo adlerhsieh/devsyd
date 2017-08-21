@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.3'
 gem 'jbuilder', '~> 2.5'
+gem 'devise'
 
 # Server
 gem 'puma', '~> 3.7'
