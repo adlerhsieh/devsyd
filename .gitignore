@@ -28,3 +28,5 @@
 /config/application.yml
 
 /public
+
+.DS_STORE
