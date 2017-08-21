@@ -22,20 +22,24 @@ u2 = User.create(
   password: "12345678"
 )
 
-3.times do
-  post = Post.create(
-    {
-      title: Faker::Lorem.sentence(2),
-      content: Faker::Lorem.paragraph,
-      user: [u1, u2].sample
-    }
-  )
-  2.times do
-    post.comments.create(
+["forum", "blog"].each do |platform|
+  3.times do
+    post = Post.create(
       {
+        title: Faker::Lorem.sentence(2),
         content: Faker::Lorem.paragraph,
-        user: [u1, u2].sample
+        user: [u1, u2].sample,
+        platform: platform
       }
     )
+    2.times do
+      post.comments.create(
+        {
+          content: Faker::Lorem.paragraph,
+          user: [u1, u2].sample,
+          platform: platform
+        }
+      )
+    end
   end
 end
