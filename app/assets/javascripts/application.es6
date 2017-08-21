@@ -11,32 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery
-//= require what-input
-//= require foundation.min
-//= require react
-//= require react-dom
 //= require_tree .
 
 var square = (n) => n * n
-
-// console.log(square(20));
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>X</h1>
-      </div>
-    )
-  }
-}
-
-$(document).ready(function(){
-  ReactDOM.render(<App />, document.getElementById('root'));
-})
