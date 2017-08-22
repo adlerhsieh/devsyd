@@ -1,5 +1,20 @@
 <% @posts.each do |post| %>
-  <div>
-    <%= post.title %>
+  <div class="post-column">
+    <div class="sidebar">
+      
+    </div>
+    <div class="content">
+      <div class="title">
+        <%= post.title %>
+      </div>
+      
+      <div class="author">
+        <%= post.user.fullname %>
+      </div>
+
+      <div class="datetime">
+        <%= distance_of_time_in_words(Time.now, post.created_at) %>
+      </div>
+    </div>
   </div>
 <% end %>
