@@ -1,7 +1,8 @@
 language: ruby
 install:
   - cp config/secrets.yml.example config/secrets.yml
+  - cp config/database.yml.example config/database.yml
   - bundle install
-  - bundle exec rake db:migrate
+  - bundle exec rake db:create db:migrate
 script:
   - bundle exec rspec
