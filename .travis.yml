@@ -6,3 +6,6 @@ install:
   - bundle exec rake db:create db:migrate
 script:
   - bundle exec rspec
+notifications:
+  email:
+    on_success: never
