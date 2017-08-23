@@ -13,7 +13,7 @@
       </div>
 
       <div class="datetime">
-        <%= distance_of_time_in_words(Time.now, post.created_at) %>
+        <%= distance_of_time_in_words(Time.now, post.created_at, scope: 'datetime.distance_in_words.short') %>
       </div>
     </div>
   </div>
