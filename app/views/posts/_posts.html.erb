@@ -5,7 +5,7 @@
     </div>
     <div class="content">
       <div class="title">
-        <%= post.title %>
+        <%= truncate(post.title, length: 30, omission: '...') %>
       </div>
       
       <div class="author">
