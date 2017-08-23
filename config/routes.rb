@@ -20,11 +20,17 @@ Rails.application.routes.draw do
   end
 
   namespace :blog do
-    resources :posts
+    resources :posts do
+      resources :comments
+    end
   end
 
   namespace :forum do
-    resources :posts
+    resources :posts do
+      resources :comments
+    end
   end
+
+  resources :users
 
 end

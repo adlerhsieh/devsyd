@@ -5,11 +5,15 @@
     </div>
     <div class="content">
       <div class="title">
-        <%= truncate(post.title, length: 30, omission: '...') %>
+        <a href="<%= forum_post_path(post) %>">
+          <%= truncate(post.title, length: 30, omission: '...') %>
+        </a>
       </div>
       
       <div class="author">
-        <%= post.user.fullname %>
+        <a href="<%= user_path(post.user) %>">
+          <%= post.user.fullname %>
+        </a>
       </div>
 
       <div class="datetime">
