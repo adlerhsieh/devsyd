@@ -11,8 +11,9 @@
       <span class="datetime"> @ <%= @post.created_at.strftime("%Y-%m-%d") %></span>
     </div>
 
+    <hr />
     <div class="content">
-      <%= @post.content %>
+      <%=raw @post.content_html %>
     </div>
   </div>
 </div>
