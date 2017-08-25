@@ -1,0 +1,10 @@
+<% comments.each do |comment| %>
+  <div class="comment-column">
+    <div class="author">
+      <%= comment.user.fullname %>
+    </div>
+    <div class="content">
+      <%= comment.content %>
+    </div>
+  </div>
+<% end %>

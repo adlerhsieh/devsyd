@@ -1,1 +1,7 @@
-<%= render "posts/post" %>
+<%= render "layouts/container" do %>
+  <%= render "posts/post", post: @post %>
+<% end %>
+
+<%= render "layouts/container" do %>
+  <%= render "comments/comments", comments: @post.comments %>
+<% end %>
