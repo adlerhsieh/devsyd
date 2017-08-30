@@ -12,26 +12,3 @@
 //
 //= require rails-ujs
 //= require_tree .
-
-var square = (n) => n * n
-
-$(document).ready(() => {
-  var darkBorder = () => {
-    $(".edit-btn").css("border", "1px solid black");
-  }
-  $(".edit-btn").bind("hover", darkBorder);
-  $(".edit-btn").click(() => {
-    $(".edit-btn").hide();
-    $(".editor-container").removeClass("hidden");
-    quill.focus();
-  })
-
-  $(".editor-save").click(() => {
-    quill.enable(false);
-    $(".editor-save-text").hide();
-    $("img.loading").removeClass("hidden");
-    $(".edit-btn").unbind("hover", darkBorder);
-  })
-
-})
-

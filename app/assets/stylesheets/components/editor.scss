@@ -6,9 +6,9 @@
   color: #505050;
   cursor: pointer;
 
-  // &:hover {
-  //   border: 1px solid black;
-  // }
+  &:hover {
+    border: 1px solid black;
+  }
 
   i {
     font-size: 19px;
@@ -19,7 +19,7 @@
   height: 100px;
 }
 
-.editor-save {
+.editor-save, .editor-cancel {
   border: 1px solid #b7b7b7;
   width: 100px;
   height: 35px;
@@ -27,10 +27,11 @@
   text-align: center;
   line-height: 35px;
   border-radius: 3px;
-  margin-left: auto;
+  margin-left: 10px;
+  float: right;
   cursor: pointer;
 
-  &:hover {
+  &.canHover:hover {
     border: 1px solid black;
   }
 }
