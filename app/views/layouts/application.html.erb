@@ -9,6 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react&#45;dom.js"></script> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
@@ -19,5 +20,6 @@
     <div class="container">
       <%= yield %>
     </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>

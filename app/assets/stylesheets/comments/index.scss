@@ -1,3 +1,12 @@
 .comment-column {
-  border-bottom: 1px solid #58595b;
+  padding: 20px 0;
+  border-bottom: 1px solid #a8a8a8;
+
+  &:last-child {
+    border-bottom: 0px;
+  }
+
+  .content {
+    margin-top: 10px;
+  }
 }

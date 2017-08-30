@@ -15,7 +15,7 @@
  */
 
 body {
-  background-color: #F5F5F5;
+  // background-color: #F5F5F5;
 }
 
 .page-title {
@@ -24,14 +24,32 @@ body {
 }
 
 .outer-container {
-  background-color: white;
-  border: 1px solid #E6E6E6;
+  // background-color: white;
+  // border: 1px solid #E6E6E6;
   margin-bottom: 5px;
-  box-shadow: 0px 1px 1.5px #A3A3A3;
+  // box-shadow: 0px 1px 1.5px #A3A3A3;
 
   .inner-container {
-    width: 85%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.datetime {
+  color: gray;
+
+  & .small {
+    font-size: 10px;
+  }
+}
+
+.spacer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+img.loading {
+  width: 20px;
+  margin-top: -5px;
 }

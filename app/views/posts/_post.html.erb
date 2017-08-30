@@ -7,8 +7,10 @@
     <a href="<%= user_path(post.user) %>">
       <%= post.user.fullname %>
     </a>
-    <span class="datetime"> @ <%= post.created_at.strftime("%Y-%m-%d") %></span>
   </div>
+  <span class="datetime">
+    <%= post.created_at.strftime("%Y-%m-%d") %>
+  </span>
 
   <hr />
   <div class="content">

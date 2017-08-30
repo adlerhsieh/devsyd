@@ -1,8 +1,9 @@
-<% comments.each do |comment| %>
+<% comments.order(created_at: :desc).each do |comment| %>
   <div class="comment-column">
     <div class="author">
       <%= comment.user.fullname %>
     </div>
+    <span class="datetime small"><%= comment.created_at.strftime("%Y-%m-%d") %></span>
     <div class="content">
       <%= comment.content %>
     </div>

@@ -1,0 +1,36 @@
+.edit-btn {
+  border: 1px solid #D8D8D8;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #505050;
+  cursor: pointer;
+
+  // &:hover {
+  //   border: 1px solid black;
+  // }
+
+  i {
+    font-size: 19px;
+  }
+}
+
+#editor {
+  height: 100px;
+}
+
+.editor-save {
+  border: 1px solid #b7b7b7;
+  width: 100px;
+  height: 35px;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 3px;
+  margin-left: auto;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid black;
+  }
+}

@@ -3,5 +3,16 @@
 <% end %>
 
 <%= render "layouts/container" do %>
+  <div class="spacer" />
+
+  <div class="edit-btn">
+    <i class="fa fa-comment-o" aria-hidden="true"></i>
+    <span>我要回覆</span>
+  </div>
+  <div class="editor-container hidden">
+    <%= render "layouts/editor" %>
+  </div>
+
+  <div class="spacer" />
   <%= render "comments/comments", comments: @post.comments %>
 <% end %>
