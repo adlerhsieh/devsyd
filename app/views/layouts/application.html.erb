@@ -22,6 +22,8 @@
         }
       <% end %>
     </script>
+
+    <%= javascript_include_tag "#{params[:controller]}/#{params[:action]}" %>
   </head>
 
   <body>
