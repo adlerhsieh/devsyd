@@ -58,7 +58,7 @@ class Editor {
       var newComment = `
         <div class="comment-column saving">
           <div class="author">
-            ${current_user.name}
+            ${gon.current_user.fullname}
           </div>
           <span class="datetime small">儲存中...</span>
           <div class="content">

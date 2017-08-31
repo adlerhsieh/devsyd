@@ -8,8 +8,7 @@ class CommentsController < ApplicationController
       content: params[:content],
       post: @post,
       platform: @post.platform,
-      # user: current_user
-      user: User.first
+      user: current_user
     )
 
     render json: {
