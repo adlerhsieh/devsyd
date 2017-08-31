@@ -25,7 +25,6 @@ $(document).ready(() => {
 
     var editorContent = quill.getText();
     if(editorContent !== "\n") {
-      console.log(editorContent)
       var newComment = `
         <div class="comment-column saving">
           <div class="author">
@@ -39,12 +38,23 @@ $(document).ready(() => {
       `
       $(".new-comment").prepend(newComment)
 
-      setTimeout(() => {
-        $(".saving .datetime").text("2017-08-30")
-        $(".saving").removeClass("saving")
-      }, 1000)
+      $.post("/posts/1/comments", {
+        content: editorContent
+      }).done((data) => {
+        if (data.status == 1) {
+          $(".saving .datetime").text(data.datetime)
+          $(".saving").removeClass("saving")
+          quill.setText('')
+        }
+        if (data.status == 0) {
+          alert("抱歉，發生錯誤，請再試一次")
+          $(".saving").remove()
+          $(".edit-btn").hide()
+          $(".editor-container").removeClass("hidden")
+          quill.focus()
+        }
+      })
     }
-    quill.setText('')
   })
 
 })

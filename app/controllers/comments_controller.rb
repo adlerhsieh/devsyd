@@ -6,13 +6,17 @@ class CommentsController < ApplicationController
       content: params[:content],
       post: @post,
       platform: @post.platform,
-      user: current_user
+      # user: current_user
+      user: User.first
     )
 
-    head :no_content
+    render json: {
+      status: 1,
+      datetime: Time.zone.now.strftime("%Y-%m-%d %H:%M:%S")
+    }
   rescue => err
     render json: {
-      status: "failed",
+      status: 0,
       message: err.message
     }
   end
