@@ -68,7 +68,7 @@ class Editor {
       `
       $(".new-comment").prepend(newComment)
 
-      $.post("/posts/1/comments", {
+      $.post(`/posts/${gon.post.id}/comments`, {
         content: editorContent
       }).done((data) => {
         if (data.status == 1) {
