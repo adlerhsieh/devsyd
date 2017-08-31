@@ -36,8 +36,8 @@ group :development do
 
   # Debug
   gem 'pry-rails'
-  gem "better_errors"
-  gem "binding_of_caller"
+  # gem "better_errors"
+  # gem "binding_of_caller"
 
   # Others
   gem "figaro"
