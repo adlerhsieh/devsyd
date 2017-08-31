@@ -5,6 +5,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'redcarpet'
 gem 'coderay'
+gem 'gon'
 
 # Server
 gem 'puma', '~> 3.7'
