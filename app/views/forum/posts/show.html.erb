@@ -1,3 +1,5 @@
+<%= javascript_include_tag "forum/posts/show" %>
+
 <%= render "layouts/container" do %>
   <%= render "posts/post", post: @post %>
 <% end %>
@@ -14,5 +16,5 @@
   </div>
 
   <div class="spacer" />
-  <%= render "comments/comments", comments: @post.comments %>
+  <%= render "comments/comments", comments: @comments %>
 <% end %>

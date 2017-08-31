@@ -5,5 +5,6 @@ class Forum::PostsController < ApplicationController
 
   def show
     @post = Forum::Post.find(params[:id])
+    @comments = @post.comments.includes(:user)
   end
 end
