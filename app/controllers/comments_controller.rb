@@ -2,6 +2,8 @@ class CommentsController < ApplicationController
   def create
     @post = Forum::Post.find(params[:post_id])
 
+    raise "No script tag allowed." if params[:content].include?("script")
+
     Comment.create!(
       content: params[:content],
       post: @post,

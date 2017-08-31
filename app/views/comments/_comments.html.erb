@@ -6,10 +6,10 @@
     </div>
     <span class="datetime small"><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></span>
     <div class="content">
-      <%= comment.content %>
+      <%= comment.content.html_safe %>
     </div>
-    <div class="reply">
-      回覆
-    </div>
+    <!-- <div class="reply"> -->
+    <!--   回覆 -->
+    <!-- </div> -->
   </div>
 <% end %>
