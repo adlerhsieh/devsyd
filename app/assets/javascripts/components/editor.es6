@@ -53,8 +53,8 @@ class Editor {
     this.showButton.show()
     this.container.addClass("hidden")
 
-    var editorContent = this.quill.getText();
-    if(editorContent !== "\n") {
+    var editorContent = this.quill.root.innerHTML;
+    if(editorContent !== "<p><br></p>") {
       var newComment = `
         <div class="comment-column saving">
           <div class="author">
