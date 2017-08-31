@@ -4,6 +4,7 @@
 
   .content {
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   &.saving {
@@ -11,6 +12,12 @@
   }
 
   .reply {
-    float: right;
+    // text-align: right;
+    // display: inline;
+    // border: 1px solid #b7b7b7;
+    // line-height: 35px;
+    // border-radius: 3px;
+    // padding-top: 10px;
+    // cursor: pointer;
   }
 }
