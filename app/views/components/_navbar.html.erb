@@ -15,6 +15,7 @@
     <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
         <li><%= link_to current_user.fullname, user_path(current_user) %></li>
+        <li><%= link_to "登出", destroy_user_session_path, method: "DELETE" %></li>
       <% else %>
         <%= form_for(@new_user, url: session_path(@new_user), html: {class: "navbar-form navbar-left" } ) do |f| %>
           <div class="form-group">
