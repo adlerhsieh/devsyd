@@ -87,11 +87,20 @@ u2 = User.create(
       }
     )
     2.times do
-      post.comments.create(
+      comment = post.comments.create!(
         {
           content: Faker::Lorem.paragraph,
           user: [u1, u2].sample,
           platform: platform
+        }
+      )
+
+      comment.comments.create!(
+        {
+          content: Faker::Lorem.paragraph,
+          user: [u1, u2].sample,
+          platform: platform,
+          post: post
         }
       )
     end
