@@ -39,7 +39,6 @@ class Editor {
   }
 
   show() {
-    this.saveButton.addClass("canHover")
     this.showButton.hide()
     this.container.removeClass("hidden")
     this.quill.focus()
