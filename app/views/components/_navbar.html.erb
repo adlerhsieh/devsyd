@@ -17,15 +17,8 @@
         <li><%= link_to current_user.fullname, user_path(current_user) %></li>
         <li><%= link_to "登出", destroy_user_session_path, method: "DELETE" %></li>
       <% else %>
-        <%= form_for(@new_user, url: session_path(@new_user), html: {class: "navbar-form navbar-left" } ) do |f| %>
-          <div class="form-group">
-            <%= f.email_field :email, placeholder: "Email", class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.password_field :password, placeholder: "密碼", class: "form-control" %>
-          </div>
-          <button type="submit" class="btn btn-default">登入</button>
-        <% end %>
+        <li><%= link_to "登入", new_user_session_path %></li>
+        <li><%= link_to "註冊", new_user_registration_path %></li>
       <% end %>
     </ul>
 </nav>
