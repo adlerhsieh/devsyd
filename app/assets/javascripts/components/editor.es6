@@ -16,9 +16,12 @@ class Editor {
     if(this.showButton.length < 1) {
       throw new this.MissingElementError("Element with class name 'edit-btn'")
     }
-    this.showButton.click(() => {
-      this.show()
-    })
+    if (gon.current_user !== undefined) {
+      this.showButton.addClass("clickable");
+      this.showButton.click(() => {
+        this.show();
+      });
+    };
 
     this.cancelButton = $(".editor-cancel")
     if(this.cancelButton.length < 1) {

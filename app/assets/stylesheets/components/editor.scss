@@ -6,7 +6,7 @@
   color: #505050;
   cursor: pointer;
 
-  &:hover {
+  &.clickable:hover {
     border: 1px solid black;
   }
 
