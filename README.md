@@ -1,0 +1,19 @@
+- users
+  - [ ] profile
+- navbar
+  - [ ] layout
+- forum
+  - post
+    - [ ] new
+    - [ ] edit
+  - comment
+    - [ ] edit
+    - [ ] permalink
+    - [ ] author link
+  - sub_comment
+    - [ ] show
+    - [ ] new
+    - [ ] edit
+    - [ ] permalink
+    - [ ] author link
+- mobile view
