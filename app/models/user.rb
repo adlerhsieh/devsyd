@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
 
+  validates :firstname, presence: true
+  validates :lastname, presence: true
+
   before_create :generate_slug
 
   def fullname

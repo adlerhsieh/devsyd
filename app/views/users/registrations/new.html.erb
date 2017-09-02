@@ -1,3 +1,6 @@
+<% if registration_error? %>
+  <%= render "components/alert", message: registration_error_message %>
+<% end %>
 
 <div class="form-container">
   <h2>註冊</h2>
@@ -5,7 +8,6 @@
   <div class="form-inner-container">
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
 
       <div class="field">
         <%= f.text_field :lastname, autofocus: true, placeholder: "姓", class: "half" %>
