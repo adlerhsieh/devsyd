@@ -9,13 +9,7 @@
 
   <div class="edit-btn">
     <i class="fa fa-comment-o" aria-hidden="true"></i>
-    <span>
-      <% if current_user %>
-        回覆
-      <% else %>
-        登入後參與討論
-      <% end %>
-    </span>
+    <span>回覆</span>
   </div>
   <div class="editor-container hidden">
     <%= render "components/editor" %>

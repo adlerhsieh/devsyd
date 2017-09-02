@@ -16,12 +16,14 @@ class Editor {
     if(this.showButton.length < 1) {
       throw new this.MissingElementError("Element with class name 'edit-btn'")
     }
-    if (gon.current_user !== undefined) {
-      this.showButton.addClass("clickable");
-      this.showButton.click(() => {
+    this.showButton.addClass("clickable");
+    this.showButton.click(() => {
+      if (gon.current_user !== undefined) {
         this.show();
-      });
-    };
+      } else {
+        location.href = `/users/sign_in?s=1&r=${location.pathname}`;
+      };
+    });
 
     this.cancelButton = $(".editor-cancel")
     if(this.cancelButton.length < 1) {

@@ -1,0 +1,11 @@
+.alert-container {
+  position: absolute;
+  left: 50%;
+
+  div.alert.alert-for-form {
+    margin-top: 55px;
+    width: 350px;
+    position: relative;
+    left: -50%;
+  }
+}

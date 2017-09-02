@@ -1,3 +1,6 @@
+<% if @message.present? %>
+  <%= render "components/alert", message: @message %>
+<% end %>
 
 <div class="form-container">
   <h2>登入</h2>
