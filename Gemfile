@@ -6,6 +6,7 @@ gem 'devise'
 gem 'redcarpet'
 gem 'coderay'
 gem 'gon'
+gem 'friendly_id'
 
 # Server
 gem 'puma', '~> 3.7'

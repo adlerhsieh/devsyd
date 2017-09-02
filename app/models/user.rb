@@ -4,8 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  extend FriendlyId
+  friendly_id :slug
+
   has_many :posts
   has_many :comments
+
+  before_create :generate_slug
 
   def fullname
     if cjk?(firstname) || cjk?(lastname)
@@ -37,4 +42,9 @@ class User < ApplicationRecord
     end
     return false
   end
+
+  def generate_slug
+    self.slug ||= SecureRandom.hex(5)
+  end
+
 end
