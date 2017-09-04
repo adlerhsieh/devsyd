@@ -19,6 +19,25 @@
   height: 100px;
 }
 
+a .editor-btn-md {
+  border: 1px solid #b7b7b7;
+  width: 110px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 1px;
+  margin-top: -70px;
+  margin-left: 10px;
+  margin-right: 15px;
+  float: right;
+  cursor: pointer;
+  color: #505050;
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+
 .editor-save, .editor-cancel {
   border: 1px solid #b7b7b7;
   width: 100px;

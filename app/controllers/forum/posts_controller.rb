@@ -13,4 +13,27 @@ class Forum::PostsController < ApplicationController
       }
     )
   end
+
+  def new
+    if not current_user
+      redirect_to new_user_session_path(nil, s: 1, r: URI(request.referer).path)
+    end
+    @post = Post.new
+  end
+
+  def create
+    
+  end
+
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
+  def delete
+    
+  end
 end
