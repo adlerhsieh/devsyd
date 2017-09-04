@@ -1,5 +1,7 @@
 - users
   - [ ] profile
+  - [ ] GitHub signin
+  - [ ] Facebook signin
 - navbar
   - [ ] layout
 - forum
