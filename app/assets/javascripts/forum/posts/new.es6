@@ -112,14 +112,15 @@ $(document).ready(() => {
   });
 
   $(".editor-save").click(() => {
-    var editorTitle = $("new-post-title").val();
+    var editorTitle = $(".new-post-title").val();
     var editorContent = this.quill.root.innerHTML;
     if(editorContent !== "<p><br></p>") {
       $.post(`/forum/posts`, {
+        title: editorTitle,
         content: editorContent
       }).done((data) => {
         if (data.status == 1) {
-          this.quill.setText('');
+          location.href = `/forum/posts/${data.post.id}`
         };
         if (data.status == 0) {
           alert("抱歉，發生錯誤，請再試一次");

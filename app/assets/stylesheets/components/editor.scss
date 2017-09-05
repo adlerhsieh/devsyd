@@ -17,6 +17,10 @@
 
 #editor {
   height: 100px;
+
+  &.editor-full {
+    height: 300px;
+  }
 }
 
 a .editor-btn-md {

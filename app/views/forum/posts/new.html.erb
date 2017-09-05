@@ -2,16 +2,21 @@
 <script src="https://cdn.quilljs.com/1.3.1/quill.js"></script>
 <%= javascript_include_tag "forum/posts/new" %>
 
-<div class="spacer"></div>
-
 <%= render "layouts/container" do %>
+
+  <div class="spacer"></div>
+
+  <h2>發表新文章</h2>
+
+  <div class="spacer"></div>
+
   <%= form_for @post do |f| %>
     <div class="editor">
       <%= f.text_field :title, class: "new-post-title", placeholder: "標題" %>
 
       <div class="spacer"></div>
 
-      <div id="editor"></div>
+      <div id="editor" class="editor-full"></div>
 
       <div class="editor-save">
         <span class="editor-save-text">儲存</span>

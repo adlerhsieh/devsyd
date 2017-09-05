@@ -18,11 +18,16 @@ class Forum::PostsController < ApplicationController
     if not current_user
       redirect_to new_user_session_path(nil, s: 1, r: URI(request.referer).path)
     end
-    @post = Post.new
+    @post = Forum::Post.new
   end
 
   def create
-    
+    post = Forum::Post.new(post_params)
+    post.user = current_user
+
+    status = post.save ? 1 : 0
+
+    render json: { status: status, post: { id: post.id } }
   end
 
   def edit
@@ -36,4 +41,10 @@ class Forum::PostsController < ApplicationController
   def delete
     
   end
+
+  private
+
+    def post_params
+      params.permit(:title, :content)
+    end
 end
