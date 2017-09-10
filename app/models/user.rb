@@ -3,12 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable, :omniauth_providers => [:facebook, :github]
 
   extend FriendlyId
   friendly_id :slug
 
   has_many :posts
   has_many :comments
+  has_many :auths, class_name: "User::Auth", foreign_key: :user_id
 
   validates :firstname, presence: true
   validates :lastname, presence: true

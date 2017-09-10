@@ -2,11 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.3'
 gem 'jbuilder', '~> 2.5'
-gem 'devise'
-gem 'redcarpet'
-gem 'coderay'
 gem 'gon'
 gem 'friendly_id'
+
+# User
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+
+# Post
+gem 'redcarpet'
+gem 'coderay'
 
 # Server
 gem 'puma', '~> 3.7'
